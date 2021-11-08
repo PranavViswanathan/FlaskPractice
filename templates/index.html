@@ -1,0 +1,24 @@
+{%extends 'layout.html'%}
+
+{% block content %}
+<center><h1>Cat Data</h1></center>
+<section class="main">
+    <div>
+        <table class="table table-hover">
+            <thead>
+                <th>ID</th>
+                <th>Info</th>
+            </thead>
+        <tbody>
+                {%for datas in data%}
+                    <tr>
+                        <td>{{datas['_id']}}</td>
+                        <td><span>{{datas['text']}}</span></td>
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+{% endblock content%}
